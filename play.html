@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/EaselPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/GSDevTools.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/InertiaPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathHelper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Physics2DPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/PhysicsPropsPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/PixiPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/EasePack.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+    <!-- CustomBounce requires CustomEase -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomBounce.min.js"></script>
+    <!-- CustomWiggle requires CustomEase -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomWiggle.min.js"></script>
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+      .green {
+        background-color: green;
+      }
+      .purple {
+        background-color: purple;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .brown {
+        background-color: brown;
+      }
+    </style>
+    <div class="box gradient-green green"></div>
+    <div class="box gradient-purple purple"></div>
+    <div class="box gradient-blue blue"></div>
+    <div class="box gradient-brown brown"></div>
+    <script>
+      // use a script tag or an external JS file
+      document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(
+          Draggable,
+          DrawSVGPlugin,
+          EaselPlugin,
+          Flip,
+          GSDevTools,
+          InertiaPlugin,
+          MotionPathHelper,
+          MotionPathPlugin,
+          MorphSVGPlugin,
+          Observer,
+          Physics2DPlugin,
+          PhysicsPropsPlugin,
+          PixiPlugin,
+          ScrambleTextPlugin,
+          ScrollTrigger,
+          ScrollSmoother,
+          ScrollToPlugin,
+          SplitText,
+          TextPlugin,
+          RoughEase,
+          ExpoScaleEase,
+          SlowMo,
+          CustomEase,
+          CustomBounce,
+          CustomWiggle
+        );
+        // gsap code here!
+
+        const tl = gsap.timeline();
+        tl.to(".green", {
+          rotation: 360,
+          x: -100,
+          duration: 1,
+          scale: 0.5,
+          opacity: 0.3,
+        });
+        tl.to(".green", {
+          rotation: -360,
+          x: 200,
+          duration: 2,
+          scale: 2,
+          opacity: 1,
+        });
+      });
+    </script>
+  </body>
+</html>
