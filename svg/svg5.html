@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <style>
+      .svg {
+        border: 1px solid black;
+      }
+      .path {
+        transition: stroke 0.5s ease-in-out;
+      }
+      .path:hover {
+        stroke: green;
+      }
+    </style>
+    <svg class="svg" width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        class="path"
+        d="
+        M -45, -45
+        L  45, -45"
+        stroke="#333333"
+        stroke-width="15"
+        stroke-linecap="round"
+      />
+      <path
+        class="path"
+        d="
+        M -45, 0
+        L  45, 0"
+        stroke="#333333"
+        stroke-width="15"
+        stroke-linecap="round"
+      />
+      <path
+        class="path"
+        d="
+        M -45, 45
+        L  45, 45"
+        stroke="#333333"
+        stroke-width="15"
+        stroke-linecap="round"
+      />
+    </svg>
+    <hr />
+    <svg class="svg" width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        d=" M -30 -20 L 0 10 L 30 -20"
+        fill="none"
+        stroke="red"
+        stroke-width="80"
+        stroke-linecap="round"
+      />
+    </svg>
+    <hr />
+    <svg class="svg" width="200" height="200" viewBox="-100 -100 200 200">
+      <path
+        d="M -70 0 L 70 0 L 30 -50 M 70 0 L 30 50"
+        fill="none"
+        stroke="#D1495B"
+        stroke-width="25"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </body>
+</html>
